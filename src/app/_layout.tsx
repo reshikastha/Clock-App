@@ -32,7 +32,7 @@ export default function RootLayout() {
       />
 
       <Tabs.Screen
-        name="worldClock"
+        name="worldclock"
         options={{
           title: "WorldClock",
           tabBarIcon: ({ color, size }) => (
