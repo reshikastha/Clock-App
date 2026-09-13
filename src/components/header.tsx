@@ -1,6 +1,5 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Text, View } from "react-native";
-import { colors, styles } from "../styles/clockStyles";
+import { styles } from "../styles/clockStyles";
 
 const Header = () => {
   return (
@@ -14,7 +13,7 @@ const Header = () => {
         <Text style={styles.appSubtitle}>TIME INSTRUMENT</Text>
       </View>
 
-      <Ionicons name="settings-outline" color={colors.grey} size={23} />
+      {/* <Ionicons name="settings-outline" color={colors.grey} size={23} /> */}
     </View>
   );
 };
