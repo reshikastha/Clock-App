@@ -1,8 +1,8 @@
-import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import Header from "@/components/header";
 import { colors, styles } from "../styles/clockStyles";
 
 type TimerPreset = {
@@ -65,18 +65,7 @@ export default function TimerScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.header}>
-          <View style={styles.logoCircle}>
-            <View style={styles.logoHand} />
-          </View>
-
-          <View style={styles.headerContent}>
-            <Text style={styles.appName}>Clock</Text>
-            <Text style={styles.appSubtitle}>TIME INSTRUMENT</Text>
-          </View>
-
-          <Ionicons name="settings-outline" color={colors.grey} size={23} />
-        </View>
+        <Header />
 
         <Text style={styles.sectionTitle}>TIMER</Text>
         <Text style={styles.sectionDescription}>Count down on purpose.</Text>

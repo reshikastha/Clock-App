@@ -1,9 +1,9 @@
-import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { colors, styles } from "../styles/clockStyles";
+import Header from "@/components/header";
+import { styles } from "../styles/clockStyles";
 
 function formatStopwatch(milliseconds: number) {
   const totalSeconds = Math.floor(milliseconds / 1000);
@@ -51,18 +51,7 @@ export default function StopwatchScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.header}>
-          <View style={styles.logoCircle}>
-            <View style={styles.logoHand} />
-          </View>
-
-          <View style={styles.headerContent}>
-            <Text style={styles.appName}>Clock</Text>
-            <Text style={styles.appSubtitle}>TIME INSTRUMENT</Text>
-          </View>
-
-          <Ionicons name="settings-outline" color={colors.grey} size={23} />
-        </View>
+        <Header />
 
         <Text style={styles.sectionTitle}>STOPWATCH</Text>
 
